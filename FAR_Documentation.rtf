@@ -1,0 +1,141 @@
+{\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil\fcharset0 Segoe Print;}}
+{\colortbl ;\red255\green192\blue0;\red0\green255\blue0;\red0\green0\blue255;\red192\green80\blue77;\red102\green102\blue102;\red0\green0\blue0;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sl240\slmult1\cf1\lang9\f0\fs28 Free Audio Reader\tab\f1\fs20 audiobook reader / audio player\f0\fs22\par
+\cf2 Version 1.78 for Windows\super\fs16 tm\nosupersub\fs22\par
+Open-Source Freeware\par
+\cf0{\field{\*\fldinst{HYPERLINK "http://freeaudioreader.codeplex.com/"}}{\fldrslt{\ul\cf3 http://freeaudioreader.codeplex.com/}}}\cf2\f0\fs22\par
+\par
+\pard\sa200\sl276\slmult1\cf1\fs28 Overview\par
+\cf0\fs24 Free Audio Reader is a Windows audio player featuring bookmarks (position and optionally volume), playlists, tag editing, tag-based file/folder renaming, cover art, jukebox, slide shows, soundbites and text-to-speech. Accessibility guidelines are followed with a resize-friendly GUI and multiple input equivalencies.\par
+For Windows XP/Vista/7\par
+Audio format: mp3, wma, wav, midi \i (tag support for mp3 only)\i0\par
+Playlist format: generic m3u\par
+Bookmark format: #Commented m3u / fbm\par
+Cover art format: jpg - no resolution or image count limitations\par
+TextReader requires the TTS portion of the MS 5.1 Speech API: \par
+{\field{\*\fldinst{HYPERLINK "http://www.microsoft.com/downloads/en/details.aspx?FamilyId=5E86EC97-40A7-453F-B0EE-6583171B4530&displaylang=en"}}{\fldrslt{\ul\cf3 http://www.microsoft.com/downloads/en/details.aspx?FamilyId=5E86EC97-40A7-453F-B0EE-6583171B4530&displaylang=en}}}\f0\fs24\par
+Freeware, Delphi 2010 source included\par
+\cf1\fs28 Basic Usage\par
+\cf0\fs24 After initially loading, click \b Play \b0 (Ctrl+P) or \b File->Open \b0 (Ctrl+O) to browse for media and begin playing. The Play button becomes a Pause button. Use \b <\b0  to rewind 15 seconds in the current file or \b <<\b0  to go back an entire file (for active playlists); \b >>\b0  and \b >\b0  similarly move forward. Click \b Stop\b0  to quit playing and auto-rewind the media and active playlist.\par
+Volume can be controlled with the top-most trackbar or with \b Alt+PgUp\b0  and \b Alt+PgDn\b0 . If the trackbar has focus (keep pressing \b Tab\b0  until it is outlined), then all navigation keys can be used to set the position (\b Left-Arrow\b0 , \b Right-Arrow\b0 , \b Home\b0 , \b End\b0 , \b PgUp\b0 , \b PgDn\b0 ).\par
+File position can be set using the second, longer trackbar, located beneath the player buttons. The position pointer can be dragged by mouse, set with \b Alt+LeftArrow\b0  or \b Alt+RightArrow\b0 , or given focus and controlled with the normal navigation keys mentioned above.\par
+For finer control of audio properties, use the \b Mixer\b0  option (\b Ctrl+M\b0 ) to launch the MMSys control panel applet, allowing access to all sound settings.\par
+The \b Shuffle\b0  (\b Ctrl+U\b0 ) option can be used anytime to rearrange the playlist queue and replay the contents. If the \b Repeat\b0  (\b Ctrl+R\b0 ) option is checked, the playlist will loop over (begin again after it finishes).\cf1\fs28\par
+Bookmarks\par
+\cf0\fs24 Create a bookmark (\b Ctrl+B\b0 ) to save file and playlist position of the currently paused or playing file. You can go back (\b Ctrl+G\b0 ) to that position anytime thereafter. Bookmarks are auto-named \i <artist>-<album> (prg%[,v#])\i0  but can be given any OS-legal name. The current volume setting can also be saved as part of a bookmark (\b Alt+B\b0 ,\b  V\b0 ). Slideshows and textfiles can also be bookmarked.\par
+Whenever FAR exits and media is paused or playing, an automatic bookmark named Autosave.fbm is (re)created.\cf1\fs28\par
+Playlists\par
+\cf0\fs24 A playlist is just a list of files in the order they are meant to be played. Sometimes a lot of files are involved, and may not sort correctly because of the way they are named or lack of tag info. If you have more than a few books or cd's then having the tag info present will be advantageous, as the program relies heavily on it and doesn't try very hard to get it correctly from the filename (if artist + album tags are blank, ...\\LastDir + Filename is used). If files sort naturally by virtue of their names, then tag info is not as important.\par
+Use the \b Playlists->New\b0  option (\b Ctrl+N\b0 ) to clear the current queue and be prompted for the base folder of the new book or cd. Normally a playlist involves a single work, but feel free to choose a base folder that includes any number of artists and their works. The queue will populate with all supported audio files found. \par
+To continue adding to the playlist queue, use \b Playlists->Edit->Add\b0  (\b Ctrl+Alt+A\b0 ) or click the \b Add\b0  button.\par
+To rearrange the play order, use the \b Move Up\b0  and \b Move Down\b0  options (\b Ctrl+Alt+U\b0 ) and (\b Ctrl+Alt+D\b0 ); the highlighted track will move up or down the list and remain highlighted in case it needs to move further. Only a single track can be moved at a time. The column headings of the listview may also be clicked to sort by that column; repeated clicks will alternate the sort order between ascending and descending.\par
+Eliminate unwanted tracks with the \b Remove\b0  option (\b Del \b0 or \b Ctrl+Alt+R\b0 ). This option acts on all highlighted tracks. No files on disk are deleted - only the reference is removed from the playlist queue. To also permanently remove the file(s) from disk as well, use \b Alt+Del\b0  instead.\par
+To save the completed playlist, use one of the save options: \b Playlists->Save\b0  (\b Ctrl+S\b0 ) or \b Playlists->SaveAs\b0 . The first option will save the playlist with its current name, asking for one if it hasn't been given one yet. The \b SaveAs\b0  option will always ask for a new name, supplying no default.\par
+To load and begin playing a playlist, use the \b Playlists->Load\b0  (\b Ctrl+L\b0 ) option. The \b File->Open\b0  (\b Ctrl+O\b0 ) option can also be used if the file filter is set to files of type m3u. \par
+If you want to migrate the playlist to an mp3 player or anything that maps to a folder, use the \b Copy\b0  button or \b Playlists->Copy\b0  (\b Ctrl+Alt+C\b0 ) option. You will be asked if you want to 'Create tag-based folders?' - reply Yes if you want multiple folders given artist names and respective contents; otherwise, everything is put in the chosen base folder.\par
+If you have Artist and Album tags filled for the highlighted track (as well as an active internet connection) you can use the \b Cover Art\b0  (\b Ctrl+Alt+V\b0 ) option to collect images for the work.  Also if these requirements are met, the \b Google\b0  option (\b Ctrl+Alt+G\b0 ) will launch a search for Artist + Album; the application home page may be visited; or you can add to your library by visiting the official LibriVox or Gutenberg sites.\par
+Prior to creating playlists, all audio files should be more or less organized, preferably with audiobooks in their own base folder and all tag info populated. Neither is enforced, but results may not be as orderly or aesthetic. If a clean-up process turns iterative, the playlist builder can be run as many times as needed - thousands of lists can be written in seconds, deleted, rewritten....\par
+\cf1\fs28 Tag Editing\par
+\cf0\fs24 Having tag info is an organizational plus, but not generally enforced. FAR reads and updates v1.1 tags; this does not effect later version info within the mp3 file if it happens to have it, so lyrics, etc. are preserved.\par
+To view or edit a track's mp3 tags, highlight the track in the playlist queue and use the \b Tags\b0  (\b Ctrl+T\b0 ) option to switch to the Tags view. \par
+To edit a single track, follow the above steps, make any changes, and click the \b Save\b0  option (\b F11\b0 ) or press \b Enter\b0 . You will be returned to that track in the listview. Your changes will reflect in the queue, although the actual tag may have been truncated.\par
+To edit all highlighted tracks, use the same process except with the \b SavePlus\b0  option (\b (F12)\b0  or by tabbing to the \b SavePlus\b0  button and pressing \b Enter\b0 ). For the initial record all fields are saved. Not all fields are carried forward to subsequent records, however; only the Artist, Album, Year and Genre fields are updated, as the remainder are generally specific to each file. Use the \b Save++\b0  option instead to extend all tags.\par
+To edit all highlighted tracks for a single tag only, first place the desired text in the system clipboard and then use the \b Playlists->Tags->PasteToAll-><\i tag\i0 >\b0  where any tag but Track# can be mass-populated. You will be prompted first for confirmation.\par
+To undo any edits you made prior to saving, use the \b Reload\b0  option (\b F10\b0 ).\par
+To resequence the Track# tag for a group of selected tracks, make the selections (not necessarily contiguous) and use the \b Playlists->Edit->Resequence Track#\b0  option. You will be prompted for an initial track number and the new sequence will be applied to the selected tracks.\par
+\cf1\fs28 Tag-Based File/Folder Renaming\par
+\cf0\fs24 Tag values may be used to reconstruct the mp3 filenames and housing folders, locating them in a more logical structure on disk, even having their natural sort order equal the preferred order, resulting in playlists that require no rearranging.\par
+To access the option, highlight all tracks of interest in the playlist queue and switch to the Tags view (Ctrl+T); then, use the now-enabled \b Rename\b0  option (\b Ctrl+Alt+N\b0 ). Use the drop-down list to choose a common mask, or create your own. You can reference all tag fields; case is insensitive. Click the \b Refresh\b0  button (or press \b Enter\b0 ) to display what the resulting filenames will be if the \b Execute\b0  option is used.\par
+A full list of proposed rename operations is presented in a listview for preview before any operations take place. The filemask can be edited and refreshed as many times as necessary before using the \b Execute\b0  option.\par
+To cancel, press \b Escape\b0 , use the \b Rename\b0  option again (\b Ctrl+Alt+N\b0 ), or click the \b Cancel\b0  button.\par
+While executing the rename/move process the playing track (if any) is paused. Any *.jpg files will move with the mp3 files. After the process, any now-empty folders are deleted.\b\par
+\cf1\b0\fs28 Collecting Images - Cover Art\cf0\fs24\par
+This option is less than precise and images acquired are not guaranteed to be relevant or non-offensive.\par
+Images are stored in the same folder as the audio files. Files are named <\i artist - album#.jpg\i0 > where # increments for each successive image. Each time the option is used ~20 uniquely-named images are created, so a folder can turn messy fairly quick (covered by the image management options a few paragraphs down).\par
+Click the Images tab to list all images for the current work. Clicking the image itself will load another random image from the current media file's folder (except in an art view, in which case the view is exited).\par
+A listview displays the track folder's *.jpg files, sortable by the image's height and width or by name. While viewing the image list they can be renamed, copied, moved or deleted (\b Del\b0 ) with the buttons beneath the listview. A splitter control between the image and file management area can be used to specify how much room to give each.\par
+If no images are returned, try temporarily altering the Artist and/or Album tags and performing the collection (\b Ctrl+Alt+V\b0 ) again. If you are using the Build version of the option, artist + album tags are expected to be populated beforehand. The Build version will disregard any folders that already have at least a single .jpg file.\par
+The application will be mostly unresponsive while collecting images with the non-Build version of the option. Track changes and track position updates will be suspended.\par
+No single image is used to represent the work; a random image is chosen from all available (*.jpg) images within the playing file's folder whenever the track changes.\par
+See further down for the \b Build\b0  option related to cover art.\par
+\cf1\fs28 Jukebox\par
+\cf0\fs24 The jukebox feature requires playlists to draw from; if none exist yet the playlist builder process begins (see the \b Build\b0  options below). Up to 99 tracks are drawn from the music playlists and an \i ad hoc\i0  playlist created to hold them. Any current track is then stopped and the jukebox playlist begins.\par
+A sampling variant (\b File->Sample\b0 ) creates a new jukebox playlist and plays random 12-second segments from each track. An option to view random slides is presented if any slideshows (*.fss) have been created (instead of the track's cover art being displayed) .\par
+\cf1\fs28 View Modes & Wallpaper\fs22\par
+\cf0\fs24 The interface can be configured to some degree to suit personal preference. The View menu contains persisted, predefined arrangements and related options.\par
+The first several View menu options offer alternate methods of selecting the Playlist, Tags, Cover Art, Slideshow, Soundbites and TextReader tabs. \par
+The \b View->Normal\b0  option will redisplay any hidden controls, but doesn't resize or relocate the window.\par
+\b View->Minimal\b0  shrinks the window to a few basic controls and docks it to the upper left.\par
+\b View->Floating Art \b0 (\b Ctrl+Alt+F\b0 ) hides everything but the image and docks it to the upper right. Height and width will adjust to changing image resolutions; if the image resolution exceeds the screen resolution, the image will be clipped.\par
+\b View->Full-Screen Art \b0 (\b Alt+Enter\b0 ) hides everything but the image and maximizes it. The image will stretch as far as the aspect ratio allows. Enable dynamic wallpaper to let the OS do a superior job of stretching.\par
+Except for \b Normal\b0 , the views act as toggles; the same option used twice is equivalent to using the \b View->Normal\b0  option (either way, size and position may be lost). If the main window ever vanishes entirely, press \b Ctrl+Alt+N\b0   to restore the view.\par
+When enabled, the \b View->Dynamic Wallpaper\b0  option will update the desktop background with currently selected or playing cover art images. If the image height is less than 300 or the width is less than 400, then there is a 50% chance of tiling the image.\par
+\b View->Menubars->etc \b0 will hide or display the various menubar panels.\cf1\fs28\par
+Build Options\fs22\par
+\cf0\fs24 To copy playlists to a named folder without volume references, use the \b Playlists->Build->Make Portable Playlists\b0  option. Any device or player should locate the media relative to the playlist file.\par
+The \b Playlists->New\b0  (\b Ctrl+N\b0 ) option will assemble a single playlist of any directory depth. To instead create multiple playlists from multiple works, where each work resides in its own folder, use the \b Playlists->Build->One Playlist Per Folder\b0  option. Results will be better if tag info is present for the files involved. Two dialogs will appear, the first asking for the location of music (press \b Escape\b0  for none) and the second asking for the base folder for audiobook files (again, press \b Escape\b0  for none). A status bar message will indicate when the process finishes, and the playlists can be viewed with \b File->Open\b0  (\b Ctrl+O\b0 ) or \b Playlists->Load\b0  (\b Ctrl+L\b0 ). \par
+The \b Playlists->Cover Art\b0  (\b Ctrl+Alt+V\b0 ) option can be used to get images for the currently highlighted work. To instead get images for all works, use the \b Playlists->Build->Playlist Cover Art\b0  option. You will be prompted for the base folders of music and audiobooks and these will be scanned; any lacking at least a single .jpg image will be included in the collection. If no results occur then all folders have at least one image or the search did not return anything.\par
+The \b Playlists->Build->Populate Durations\b0  option will either overwrite or append the track's duration (mm:ss) to the Comment tags for all *.mp3 files within the selected base folder. If appending, the track duration will be placed in parentheses after the existing tag content, and may not always fit. If overwriting then existing Comment tags are completely replaced with the mm:ss track duration format. The player is unusable during this process.\par
+\cf1\fs28 Slideshows\fs22\par
+\cf0\fs24 FAR can create and play various types of slideshows based on cover art or other images.\par
+\cf1\fs28 Soundbites\fs22\par
+\cf0\fs24 File references are used instead of actual audio slices.\par
+\cf1\fs28 TextReader\fs22\par
+\cf0\fs24 FAR implements MS SAPI 5.x Text-To-Speech for reading textfiles aloud. Bookmarking the audio stream position is not supported, only the text being viewed.\par
+\cf1\fs28 Launch Options\fs22\par
+\cf0\fs24 Files can be dragged from Windows Explorer and dropped onto the player; supported audio files will be added to the playlist queue as well as any references found within m3u files. Also accepted are the other supported filetypes: bookmarks (older .m3u or newer .fsb), slideshows (.fss), soundbites (*.fsb) and textfiles (*.txt).\par
+To register a different global Ctrl+\i FKey\i0  instead of the \b Ctrl+F12\b0  default, use the /hk# parameter:\par
+far.exe /hk7\par
+To use the application path as the data path for bookmarks and playlists instead of the Windows \\Users folder structure, launch FAR with the /approot parameter:\par
+far.exe /approot\par
+Arguments can be mixed with any filespecs or folder names:\par
+far.exe /approot c:\\adir\par
+far.exe c:\\adir /approot\par
+far.exe c:\\adir /approot mp3file playlistfile somedir bookmarkfile [etc]\par
+far.exe bookmark.fbm playlist.m3u slideshow.fss textfile.txt, [open/save dialogs use \\Users...]\par
+far.exe /approot files [open/save dialogs use application folder]\par
+far c:\\Heinlein\\Stranger [play all valid media in dir and subdirs, possibly in the right order]\par
+The last example can be duplicated by dragging and dropping a folder to the FAR player; the resulting playlist can then be reordered and resaved if the file sequence is wrong.\par
+If a playlist is already present, the new entries will be appended to the end. The playlist is not explicitly saved as new tracks are added. After adding all files, reorder if needed and use either the \b Playlists->Save\b0  (\b Ctrl+S\b0 ) or \b Playlists->SaveAs\b0  options.\par
+Passing multiple individual files via the Windows Explorer \b Open\b0  option is not currently supported.\cf1\fs22\par
+\fs28 Program Keys\fs22\par
+\cf4 Application hotkey\tab Ctrl+F12, or set with /hk# (# is 1 - 12)\par
+Open File\tab\tab Ctrl+O\par
+Previous Playlist\tab Ctrl+E\par
+Previous File\tab\tab Alt+UpArrow, F3\par
+Previous Index\tab\tab Alt+LeftArrow, F4\par
+Play/Pause\tab\tab Ctrl+P, Spacebar (if Playlists is (last-)active page)\par
+Stop\tab\tab\tab Ctrl+S\par
+Next Index\tab\tab Alt+RightArrow, F5\par
+Next File\tab\tab Alt+DownArrow, F6\par
+Next Playlist\tab\tab Ctrl+Y\par
+Volume Down\tab\tab Alt+PgDn, F7\par
+Volume Up\tab\tab Alt+PgUp, F8\par
+Jukebox\tab\tab Ctrl+J\par
+Change Art\tab\tab Alt+Backspace\par
+Floating Art\tab\tab Ctrl+Alt+F\par
+Full-Screen Art\tab\tab Alt+Enter\par
+Normal View\tab\tab Ctrl+Alt+N\par
+Mixer\tab\tab\tab Ctrl+M\par
+Create Bookmark\tab Ctrl+B\par
+Goto Bookmark\tab Ctrl+G\par
+New Playlist \tab\tab Ctrl+N\par
+Load Playlist\tab\tab Ctrl+L\par
+Shuffle\tab\tab\tab Ctrl+U\par
+Repeat\tab\tab\tab Ctrl+R\par
+Add to Queue\tab\tab Ctrl+Alt+A, Ins (in playlist view)\par
+Remove from Queue\tab Ctrl+Alt+R, Del (in playlist view)\par
+Delete from Disk\tab Alt+Delete\par
+Move Up\tab\tab Ctrl+Alt+U\par
+Move Down\tab\tab Ctrl+Alt+D\par
+Tag View\tab\tab Ctrl+T\par
+Reload Tags\tab\tab F10\par
+Save Tags\tab\tab F11, Enter\par
+SavePlus\tab\tab F12\par
+Copy Playlist\tab\tab Ctrl+Alt+C\par
+Get Cover Art\tab\tab Ctrl+Alt+V\par
+Image Viewer\tab\tab Ctrl+I\par
+Help\tab\tab\tab F1\par
+\cf5\highlight6\b\fs20 --- end ---\par
+}
+ 

@@ -1,0 +1,151 @@
+Free Audio Reader Change Log
+
+2011-9-22 - v1.78
+Added: View->Show Menu (Ctrl+Alt+M) (popup/context menu always remains)
+Added: View->Cover Art Slideshow (= Change Art option (Alt+BkSp) every 6 seconds)
+Added: Spacebar plays/pauses (Ctrl+P)
+Added: Slideshows, Soundbites, TextReader
+Added: Show/hide menubars for all tabs
+Added: Dbl-click folder/filename topbars for Tags/Cover Art/TextReader = launch folder in Explorer
+Added: Column-click sorting for all listviews
+Added: File->Publish option for any loaded playlist, slideshow, textfile or combination thereof
+Added: Ctrl+A (Select All) support for multi-select-enabled listviews (playlist, slideshow, soundbites)
+Changed: View->Minimal retains splitter, file position
+Changed: Build->One Playlist Per Folder also prompts to create portable playlists in media folders
+Changed: Alt+Del confirms file deletion of highlighted track
+Changed: Ctrl+S = Stop (stops everything)
+Changed: pbonceonly replaced with file-based queue (*.que in app dir; contents = any legal param per line)
+Changed: bookmark file format (.fbm); old format still readable
+Changed: FixPlaylist() rejects entirely missing playlists (use New to recreate); eliminates unfound tracks within m3u if found (again, use New if tracks weren't deliberately removed).
+Fixed: File->Sample menu item gets checked or unchecked
+Fixed: status bar panels 0 and 1 get correct length
+Fixed: Win7 user path restored to \users\curruser\My Documents\ (pass /approot to use FAR's run-folder instead)
+
+2011-5-15 - v1.77
+Added: View->Normal+Relocate (Ctrl+Alt+N)
+Added: add'l formats for external FIV viewer (FAR itself remains jpg-only) - jpg,gif,wmf,bmp,ico
+Fixed: Tags->Rename option zero-pads Track# for accurate sorting
+Fixed: bookmarking <=5s into a file always pointed to first playlist entry
+Fixed: OS-passed pathless .m3u playlists launch correctly
+
+2011-5-11 - v1.76
+Fixed: using File->Sample turns off sampling if sampling is already active
+Fixed: error saving tags
+
+2011-5-9 - v1.75
+Added: File->Sample (Jukebox with randomly-selected 12-second segments)
+Added: View->Floating Art (Ctrl+Alt+F) - displays actual resolution vs. full-screen stretch mode
+Added: View->Dynamic Wallpaper
+Added: Prompt to set wallpaper when double-clicking image name in FIV
+Changed: Subwindows now in tabbed control; redundant Tags button removed; image-clicking changes art in Normal view
+
+2011-5-5 - v1.74
+Added: global hotkey Ctrl+F12 (or pass /hk# where # is 1 - 12)
+Added: Alt+Enter (Full Screen Art)
+Added: Alt+Delete (Stop)
+Added: Build->Populate Durations (add track durations to Comment tags)
+Added: Build->Make Portable Playlists (copies existing playlists to a selected folder, removing volume references)
+Changed: View->Normal doesn't reload window coords
+Changed: generic MCI error replaced with offending filename
+Changed: Build/other processes allow wma,wav,midi (tags unsupported)
+Fixed: accept portable playlists (relative paths prefixed with playlist file's path)
+Fixed: FIV accepts dragged files and folders
+Fixed: FIV accepts command-line params (single file or folder)
+Note: FIV isn't suitable for image dimensions over 2k x 2k
+
+2011-5-01 - v1.73
+Fixed: status bar height auto-scales per text height
+Fixed: Jukebox option hangs if all playlist files point to invalid mp3's
+Fixed: Bookmark* and Jukebox* playlists ignored by Jukebox option
+Fixed: Enter key in Playlist listview does something [update active playlist index & play selected track]
+Changed: track duration auto-populates to Comment tag + updated in listview - both only if enabled
+Added: option Playlists->Edit->Add Duration to Comment [initial default = unchecked]
+Added: option Tags->PasteToAll->[tag] (a way to paste the system clipboard to all selected tracks for a particular tag)
+Added: option Track->Find Current [highlight paused or playing track in listview]
+
+2011-4-27 - v1.72
+Added: View menu
+Added: Save++ button extends all tags (Save+ is limited to Artist, Album, Genre and Year)
+Added: Previous/Next Playlist (<<< / >>>) buttons added
+Added: File-based parms for FIV / FIC
+Added: Tag-based dir/file renaming
+Fixed: bookmark creation ensures playlist creation (if queue has more than one track but playlist was never saved)
+Fixed: .ini values properly update
+Fixed: Find/Find Next work outside of playlist view
+Changed: Build version of image collecting made external (FIC)
+Changed: Splash screen suppressed if no params passed
+
+2011-4-23 - v1.71
+Added: Playlists->Edit->Resequence Track# option
+Added: Playlists->Previous/Next Playlist (Ctrl+E / Ctrl+Y)
+Added: Autosave.m3u bookmark
+Added: External image viewer option (FIV)
+Changed: Thumb graduates to view/preview
+Fixed: Shuffle is much quicker for lengthy playlists
+Fixed: various issues with Build version of cover art
+Abandoned: WinExp-opening multiple files...
+
+2011-4-19 - v1.7
+Fixed: image view splitter could render panel inaccessible if sized to zero
+Fixed: display images after collecting if in playlist view + no file playing
+Added: Del key = Remove, Ins = Add in playlist view
+Added: LibriVox URL
+Added: window position preserved
+Changed: thumb relocated for better window resizing
+Changed: dropped last statusbar panel
+
+2011-4-17 - v1.6
+Fixed: "list index" error deleting last folder pic
+Changed: images listbox to listview, jpg dimensions added
+Added: Google lookup for selected Artist + Album
+
+2011-4-15 - v1.5
+Added: track folder images list / move, copy, rename, delete cover art
+Fixed: "cannot focus" errors clicking MoveUp in Image view, etc.
+Fixed: 'Create tag-based folders?' option errored from untrimmed tag strings
+
+2011-4-14 - v1.4
+Added popup menu
+Added splash screen for extra long load times (eq, when passing parameter of a large playlist or base folder of complex directory structure)
+Added current-track Cover Art option (requires Artist/Album tags for highlighted listview entry)
+Added Get Cover Art build option (operates on playlists)
+Added thumb image (click to zoom and click zoomed image to change; Del will confirm .jpg delete if zoomed image is visible); jpg's expected in playing file's folder (with *.mp3 files)
+Added spin buttons to Track edit
+Added Esc to leave tag editing or image viewing and redisplay tracks
+Added Copy option: copy playlist files and pathless playlist to folder or drive-mapped player
+Added: .rtf manual / documentation
+Changed: Shuffle also resets PlayIndex and restarts playlist
+Fixed: startup volume correctly set
+Fixed: Accept multiple files with Playlist->Load option
+Fixed: Build option distinguishes between audiobooks and music; jukebox only uses music
+Fixed: Allow user to locate missing track files in a playlist
+Fixed: Browsed-for missing playlist in bookmark files didn't display after user repointed to new location
+Fixed: Open button had incorrect tab order
+Fixed: tag editing works better with concurrent operations (track changes, SavePlus highlight preserving, etc)
+Pending: WinExp-opening multiple files breaks due to PBOnceOnly param-passing error [junk at trunced end of WM_CopyMessage string)
+
+2011-4-8 - v1.3
+Jukebox feature added (99 random tracks from all playlists)
+Save is default button on Tags panel (Enter/Return = click)
+Status bar auto-resizes with form
+Listview gets focus after starting media
+Tag Track edit ignores non-digits
+Tag Title edit chops out '.mp3' if pasted in
+All tag fields get trimmed of leading and trailing blanks
+Fixed: Genre list sorted
+Fixed: could update wrong listview entry when tag-editing if track changed (file tags were ok)
+
+2011-4-6 - v1.2
+Fixed: scroll-to-view starting bookmark track in addition to highlighting it
+Fixed: allow Browse-For on a bookmark's missing playlist; update bookmark file (same behavior as for missing media file)
+
+2011-4-4 - v1.1
+Converted Genre text edit to drop-down list
+Fixed: unexpected loss of listview entries caused errors
+Fixed: some residual non-referenced code removed
+Added: option to build one playlist per folder
+Fixed: nested menu items for Remove & Shuffle did nothing
+Fixed: removed conflicting Ctrl+S Stop accelerator
+
+2011-4-2 - v1.0
+Released v1.0 - http://freeaudioreader.codeplex.com

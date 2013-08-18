@@ -1,0 +1,13 @@
+<a href="https://freeaudioreader.codeplex.com/">Free Audio Reader</a>
+<p><strong><a href="https://freeaudioreader.codeplex.com/">Free Audio Reader</a></strong> is a Windows audio player, build with <strong>accessibility</strong> guidelines in mind, and featuring a resize&#45;friendly <abbr title="Graphical User Interface">gui</abbr>, and multiple input equivalents. <strong><a href="https://freeaudioreader.codeplex.com/">Free Audio Reader</a></strong> has the following features:</p>
+<ul>
+  <li>Bookmarks (Position and Optionally Volume)</li>
+<li>Playlists</li>
+<li>Tag Editing</li>
+<li>Tag&#45;based File/Folder Renaming</li>
+<li>Cover Art</li>
+<li>Jukebox</li>
+<li>Slide Shows</li>
+<li>Soundbites</li>
+<li>TextReader with Limited Text&#45;To&#45;Speech.</li>
+</ul>

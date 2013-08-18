@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2011/03/25 14:29:35.157.pas,C:\Users\Vince\Documents\RAD Studio\Projects\Unit1.pas=C:\Proj\FAR\Main.pas</Transaction>
+    <Transaction>2011/03/25 14:29:35.157.dfm,C:\Users\Vince\Documents\RAD Studio\Projects\Unit1.dfm=C:\Proj\FAR\Main.dfm</Transaction>
+    <Transaction>2011/03/25 14:29:38.451.dproj,C:\Users\Vince\Documents\RAD Studio\Projects\Project1.dproj=C:\Proj\FAR\FAR.dproj</Transaction>
+    <Transaction>2011/03/27 05:48:53.822.pas,C:\Proj\FAR\MP3.pas=</Transaction>
+    <Transaction>2011/04/08 18:17:42.784.pas,C:\Proj\_Misc\PBOnceOnly.pas=</Transaction>
+    <Transaction>2011/04/08 18:17:42.789.pas,C:\Proj\_Misc\MMDevApi.pas=</Transaction>
+    <Transaction>2011/04/11 20:07:26.662.pas,C:\Proj\FAR\ViewImage.pas=</Transaction>
+    <Transaction>2011/04/11 20:07:26.662.dfm,C:\Proj\FAR\ViewImage.dfm=</Transaction>
+    <Transaction>2011/04/16 12:16:23.867.pas,C:\Proj\FAR\Main.pas=</Transaction>
+    <Transaction>2011/04/16 12:16:23.875.dfm,C:\Proj\FAR\Main.dfm=</Transaction>
+    <Transaction>2011/05/16 18:08:15.914.pas,C:\Proj\FAR\Unit1.pas=C:\Proj\FAR\EditSS.pas</Transaction>
+    <Transaction>2011/05/16 18:08:15.917.dfm,C:\Proj\FAR\Unit1.dfm=C:\Proj\FAR\EditSS.dfm</Transaction>
+    <Transaction>2011/05/19 18:54:25.816.pas,C:\Proj\FAR\Unit1.pas=C:\Proj\FAR\SB.pas</Transaction>
+    <Transaction>2011/05/19 18:54:25.824.dfm,C:\Proj\FAR\Unit1.dfm=C:\Proj\FAR\SB.dfm</Transaction>
+    <Transaction>2011/05/19 20:58:12.815.pas,C:\Proj\FAR\SB.pas=C:\Proj\FAR\EditSB.pas</Transaction>
+    <Transaction>2011/05/19 20:58:12.815.dfm,C:\Proj\FAR\SB.dfm=C:\Proj\FAR\EditSB.dfm</Transaction>
+    <Transaction>2011/05/20 12:33:43.433.pas,C:\Proj\FAR\ID3v2Library.pas=</Transaction>
+    <Transaction>2011/05/22 12:13:43.742.pas,C:\Proj\FAR\PBOnceOnly.pas=</Transaction>
+    <Transaction>2011/05/23 20:30:02.764.pas,C:\Proj\FAR\Unit1.pas=C:\Proj\FAR\Voice.pas</Transaction>
+    <Transaction>2011/05/23 20:30:02.764.dfm,C:\Proj\FAR\Unit1.dfm=C:\Proj\FAR\Voice.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
